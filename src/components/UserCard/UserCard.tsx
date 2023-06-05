@@ -15,12 +15,12 @@ function UserCard({ user }: TUserProps) {
           <li>{`email: ${user.email}`}</li>
           <li>{`username: ${user.username}`}</li>
           <li>{`phone: ${user.phone}`}</li>
-          <ul className={`${styles.list} ${styles.companyList}`}>
-            <h3>Company:</h3>
-            <li>{`name: ${user.company.name}`}</li>
-            <li>{`bs: ${user.company.bs}`}</li>
-            <li>{`catchPhrase: ${user.company.catchPhrase}`}</li>
-          </ul>
+        </ul>
+        <ul className={`${styles.list} ${styles.companyList}`}>
+          <h3>Company:</h3>
+          <li>{`name: ${user.company.name}`}</li>
+          <li>{`bs: ${user.company.bs}`}</li>
+          <li>{`catchPhrase: ${user.company.catchPhrase}`}</li>
         </ul>
       </div>
     </Link>

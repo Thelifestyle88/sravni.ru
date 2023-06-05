@@ -10,11 +10,11 @@ function MainPage() {
     return <p>Loading...</p>;
   }
   return (
-    <main className={styles.mainPageWrapper}>
+    <section className={styles.mainPageWrapper}>
       {users.map((obj) => {
         return <UserCard key={obj.id} user={obj} />;
       })}
-    </main>
+    </section>
   );
 }
 
