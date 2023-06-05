@@ -1,20 +1,25 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { useAppSelector } from '../../..';
 import { useState } from 'react';
+
+import { useAppSelector } from '../../../index';
 import styles from './styles/userPage.module.scss';
 
 function UserPage() {
-  const allUsers = useAppSelector((store) => store.getAllUsersReducer.usersData);
-  const allPhotos = useAppSelector((store) => store.getAllPhotosReducer.photosData);
   const navigate = useNavigate();
   const userId = useParams();
+
+  const allUsers = useAppSelector((store) => store.getAllUsersReducer.usersData);
+  const allPhotos = useAppSelector((store) => store.getAllPhotosReducer.photosData);
+
   const [count, setCount] = useState(0);
   const user = allUsers.find((item) => item.id === Number(userId.userId));
   const photos = allPhotos.filter((item) => item.albumId === Number(userId.userId));
   const photosOnPage = photos.splice(count, 10);
+
   if (Number(userId.userId) < 1 || Number(userId.userId) > 10) {
     return <p>Нет данных</p>;
   }
+
   return (
     <section className={styles.userPageWrapper}>
       <h1>{user?.name}</h1>
@@ -29,6 +34,7 @@ function UserPage() {
             );
           })}
       </div>
+
       <div className={styles.buttonsWrapper}>
         <button
           onClick={() => {

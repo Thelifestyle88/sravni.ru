@@ -1,10 +1,11 @@
 import ReactDOM from 'react-dom/client';
-import './index.scss';
-import App from './components/App/App';
 import { Provider, TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
+
 import { rootReducer } from './services';
+import App from './components/App/App';
+import './index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 export const store = configureStore({
@@ -18,11 +19,9 @@ export const useAppDispatch: DispatchFunc = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
 root.render(
-  <>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  </>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
 );

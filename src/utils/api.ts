@@ -1,6 +1,5 @@
 import { baseUrl } from "./constant";
 
-
 function checkResponse(res: Response) {
     if (res.ok) {
         return res.json();

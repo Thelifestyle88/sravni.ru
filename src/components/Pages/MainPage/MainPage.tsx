@@ -1,4 +1,4 @@
-import { useAppSelector } from '../../..';
+import { useAppSelector } from '../../../index';
 import UserCard from '../../UserCard/UserCard';
 import styles from './styles/mainPage.module.scss';
 
@@ -9,6 +9,7 @@ function MainPage() {
   if (isPageOnLoading) {
     return <p>Loading...</p>;
   }
+
   return (
     <section className={styles.mainPageWrapper}>
       {users.map((obj) => {

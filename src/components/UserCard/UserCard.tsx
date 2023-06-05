@@ -16,6 +16,7 @@ function UserCard({ user }: TUserProps) {
           <li>{`username: ${user.username}`}</li>
           <li>{`phone: ${user.phone}`}</li>
         </ul>
+
         <ul className={`${styles.list} ${styles.companyList}`}>
           <h3>Company:</h3>
           <li>{`name: ${user.company.name}`}</li>
