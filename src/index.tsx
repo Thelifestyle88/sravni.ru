@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import App from './components/App/App';
 import { Provider, TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';

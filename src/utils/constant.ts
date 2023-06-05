@@ -1,4 +1,4 @@
-export const baseUrl = 'https://jsonplaceholder.typicode.com/users'
+export const baseUrl = 'https://jsonplaceholder.typicode.com'
 
 export const baseHeader = {
     'Content-Type': 'application/json'

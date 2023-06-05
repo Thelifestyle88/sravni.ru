@@ -1,4 +1,4 @@
-import { baseUrl, baseHeader } from "./constant";
+import { baseUrl } from "./constant";
 
 
 function checkResponse(res: Response) {
@@ -12,5 +12,9 @@ function checkResponse(res: Response) {
 }
 
 export function getUsers() {
-    return fetch(`${baseUrl}`).then(checkResponse)
+    return fetch(`${baseUrl}/users`).then(checkResponse)
+}
+
+export function getPhotos() {
+    return fetch(`${baseUrl}/photos`).then(checkResponse)
 }

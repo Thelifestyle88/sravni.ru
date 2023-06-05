@@ -27,3 +27,11 @@ export type TCompany = {
   catchPhrase: string,
   name: string
 }
+
+export type TPhotos = {
+  albumId: number,
+  id: number,
+  title: string,
+  url: string,
+  thumbnailUrl: string
+}

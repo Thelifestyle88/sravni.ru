@@ -1,21 +1,19 @@
 import { useAppSelector } from '../../..';
 import UserCard from '../../UserCard/UserCard';
+import styles from './styles/mainPage.module.scss';
 
 function MainPage() {
   const isPageOnLoading = useAppSelector((store) => store.getAllUsersReducer.allUsersRequest);
   const users = useAppSelector((store) => store.getAllUsersReducer.usersData);
-  console.log(users);
 
   if (isPageOnLoading) {
     return <p>Loading...</p>;
   }
   return (
-    <main>
-      <div>
-        {users.map((obj) => {
-          return <UserCard key={obj.id} user={obj} />;
-        })}
-      </div>
+    <main className={styles.mainPageWrapper}>
+      {users.map((obj) => {
+        return <UserCard key={obj.id} user={obj} />;
+      })}
     </main>
   );
 }
