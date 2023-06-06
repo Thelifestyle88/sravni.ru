@@ -21,7 +21,7 @@
 - клонировать проект на локальный компьютер командой в терминале:
 
 ```
-  git clone git clone https://github.com/Thelifestyle88/sravni.ru.git
+  git clone https://github.com/Thelifestyle88/sravni.ru.git
 ```
 
 - в терминале перейти в папку проекта и установить пакет serve:
