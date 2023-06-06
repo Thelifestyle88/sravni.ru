@@ -22,7 +22,7 @@ function UserPage() {
 
   return (
     <section className={styles.userPageWrapper}>
-      <h1>{user?.name}</h1>
+      <h1 className={styles.userName}>{user?.name}</h1>
       <div className={styles.photosWrapper}>
         {photos &&
           photosOnPage.map((item) => {
@@ -44,24 +44,26 @@ function UserPage() {
           }}>
           Предыдущий user
         </button>
-        <button
-          className={styles.button}
-          onClick={() => {
-            if (count === 0) {
-              setCount(0);
-            } else setCount(count - 10);
-          }}>
-          Назад
-        </button>
-        <button
-          className={styles.button}
-          onClick={() => {
-            if (count === 40) {
-              setCount(40);
-            } else setCount(count + 10);
-          }}>
-          Вперёд
-        </button>
+        <div className={styles.buttonImages}>
+          <button
+            className={styles.button}
+            onClick={() => {
+              if (count === 0) {
+                setCount(0);
+              } else setCount(count - 10);
+            }}>
+            Назад
+          </button>
+          <button
+            className={styles.button}
+            onClick={() => {
+              if (count === 40) {
+                setCount(40);
+              } else setCount(count + 10);
+            }}>
+            Вперёд
+          </button>
+        </div>
         <button
           className={styles.button}
           onClick={() => {

@@ -36,3 +36,9 @@
 .cardWrapper:hover .companyList {
     opacity: 1;
 }
+
+@media screen and (max-width: 600px) {
+    .cardWrapper { 
+     width: 300px;
+ }
+ }
