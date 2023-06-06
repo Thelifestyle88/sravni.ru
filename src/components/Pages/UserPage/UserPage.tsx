@@ -37,6 +37,7 @@ function UserPage() {
 
       <div className={styles.buttonsWrapper}>
         <button
+          className={styles.button}
           onClick={() => {
             navigate(`/user/${Number(userId.userId) - 1}`);
             setCount(0);
@@ -44,6 +45,7 @@ function UserPage() {
           Предыдущий user
         </button>
         <button
+          className={styles.button}
           onClick={() => {
             if (count === 0) {
               setCount(0);
@@ -52,6 +54,7 @@ function UserPage() {
           Назад
         </button>
         <button
+          className={styles.button}
           onClick={() => {
             if (count === 40) {
               setCount(40);
@@ -60,6 +63,7 @@ function UserPage() {
           Вперёд
         </button>
         <button
+          className={styles.button}
           onClick={() => {
             navigate(`/user/${Number(userId.userId) + 1}`);
             setCount(0);

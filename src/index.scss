@@ -1,9 +1,14 @@
 @import-normalize;
 @import './constants.scss';
 
-:root {
+#root {
     max-width: 1280px;
     margin: 0 auto;
     background: #131316;
     color: $whitecolor;
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
