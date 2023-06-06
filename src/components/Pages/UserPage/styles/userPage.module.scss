@@ -31,6 +31,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    @media screen and (max-width: 640px) {
+    flex-direction: column;
+    }
     margin: 0 auto;
     gap: 10px;
     align-items: center;
