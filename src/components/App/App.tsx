@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 
 import { useAppDispatch } from '../../index';
 import { getAllUsers } from '../../services/actions/getAllUsers';
-import { getAllPhotos } from '../../services/actions/getAllPhotos';
 
 import MainPage from '../Pages/MainPage/MainPage';
 import UserPage from '../Pages/UserPage/UserPage';
@@ -13,7 +12,6 @@ function App() {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getAllUsers());
-    dispatch(getAllPhotos());
   });
 
   return (

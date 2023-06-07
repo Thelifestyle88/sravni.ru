@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import { getAllUsersReducer } from "./reducers/getAllUsersReducer";
-import { getAllPhotosReducer } from "./reducers/getAllPhotosReducer";
+import { getUserPhotosReducer } from "./reducers/getUserPhotosReducer";
+import { getUserReducer } from "./reducers/getUserReducer";
 
 export const rootReducer = combineReducers({
     getAllUsersReducer,
-    getAllPhotosReducer
+    getUserPhotosReducer,
+    getUserReducer
 })

@@ -14,6 +14,10 @@ export function getUsers() {
     return fetch(`${baseUrl}/users`).then(checkResponse)
 }
 
-export function getPhotos() {
-    return fetch(`${baseUrl}/photos`).then(checkResponse)
+export function getPhotos(id: string) {
+    return fetch(`${baseUrl}/albums/${id}/photos`).then(checkResponse)
+}
+
+export function getUser(id: string) {
+    return fetch(`${baseUrl}/users/${id}`).then(checkResponse)
 }

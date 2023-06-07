@@ -1,26 +1,26 @@
 import { Dispatch } from "react";
 import { getPhotos } from "../../utils/api";
 
-export const GET_ALL_PHOTOS_REQUEST = 'GET_ALL_PHOTOS_REQUEST'
-export const GET_ALL_PHOTOS_SUCCEED = 'GET_ALL_PHOTOS_SUCCEED'
-export const GET_ALL_PHOTOS_FAILED = 'GET_ALL_PHOTOS_FAILED'
+export const GET_USER_PHOTOS_REQUEST = 'GET_USER_PHOTOS_REQUEST'
+export const GET_USER_PHOTOS_SUCCEED = 'GET_USER_PHOTOS_SUCCEED'
+export const GET_USER_PHOTOS_FAILED = 'GET_USER_PHOTOS_FAILED'
 
-export function getAllPhotos() {
+export function getUserPhotos(id: string) {
     return function (dispatch: Dispatch<any>) {
         dispatch({
-            type: GET_ALL_PHOTOS_REQUEST,
+            type: GET_USER_PHOTOS_REQUEST,
         });
-
-        getPhotos()
+        getPhotos(id)
             .then((res) => {
+                console.log(res)
                 if (res) {
                     dispatch({
-                        type: GET_ALL_PHOTOS_SUCCEED,
+                        type: GET_USER_PHOTOS_SUCCEED,
                         payload: res
                     })
                 } else {
                     dispatch({
-                        type: GET_ALL_PHOTOS_FAILED,
+                        type: GET_USER_PHOTOS_FAILED,
                     })
                 }
             })
