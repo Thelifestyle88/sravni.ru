@@ -26,14 +26,11 @@ function UserPage() {
   const photos = userPhotos.filter((item) => item.albumId === Number(userId));
   const photosOnPage = photos.splice(count, 10);
 
-  if (!user) {
-    return <p>Нет данных</p>;
-  }
-
   if (isLoading) {
     return <p>Загрузка...</p>;
+  } else if (!user) {
+    return <p>Нет данных</p>;
   }
-
   return (
     <section className={styles.userPageWrapper}>
       {user && (

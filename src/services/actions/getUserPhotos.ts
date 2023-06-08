@@ -12,7 +12,6 @@ export function getUserPhotos(id: string) {
         });
         getPhotos(id)
             .then((res) => {
-                console.log(res)
                 if (res) {
                     dispatch({
                         type: GET_USER_PHOTOS_SUCCEED,
